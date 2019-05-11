@@ -22,13 +22,6 @@ layout: compress
                     </a>
                 </div>
                 {{ content }}
-                <div class="article-content" id="github-content">
-                    {{ content }}
-                </div>
-                <script>$("#github-content").load("https://raw.githubusercontent.com/{{ site.github-url }}/{{ page.github_url }}/master/README.md", function () {
-                    document.getElementById('github-content').innerHTML = marked(document.getElementById('github-content').innerHTML);
-                    });
-                </script>
             </div>
         </div>
         {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}

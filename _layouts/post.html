@@ -32,6 +32,13 @@ layout: compress
                         <i class="fa fa-chevron-left"></i>
                     </a>
                 </div>
+                <div class="article-content" id="github-content">
+                    {{ content }}
+                </div>
+                <script>$("#github-content").load("https://raw.githubusercontent.com/{{ site.github-url }}/{{ page.github_url }}/master/README.md", function () {
+                    document.getElementById('github-content').innerHTML = marked(document.getElementById('github-content').innerHTML);
+                    });
+                </script>
                 {{ content }}
                 <div class="entry-meta">
                 {% include meta.html %}
