@@ -1,8 +1,8 @@
 # Site
-title:              Eric
+title:              Eric Trenkel
 bio:                'Enthusiastic Software Developer from Germany.'
 description:        "Check out my projects on GitHub and follow me on other platforms if you like what I do."
-reading_time:       true
+reading_time:       false
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
@@ -30,9 +30,9 @@ disqus_shortname:   eric-trenkel
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
+google:
   #plus:            #username
-  #analytics:
+  analytics: UA-108863569-5
   #verify:
   #ad-client:
   #ad-slot:
