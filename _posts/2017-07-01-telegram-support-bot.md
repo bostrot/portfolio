@@ -7,4 +7,5 @@ project: true
 comments: true
 tags: [telegram, nodejs]
 github_url: "telegram-support-bot"
+github_issue: "24"
 ---

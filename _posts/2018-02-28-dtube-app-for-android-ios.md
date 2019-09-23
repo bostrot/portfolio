@@ -7,4 +7,5 @@ project: true
 comments: true
 tags: [flutter, steem, dtube]
 github_url: "dtubeviewer"
+github_issue: "19"
 ---

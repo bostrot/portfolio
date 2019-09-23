@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet" />
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+    .chat:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .chat-icon {
+        position: absolute;
+        bottom: 2.5em;
+        right: 3em;
+        background: #CDDC39;
+        padding: .8em;
+        color: #fff;
+        border-radius: 100%;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-icon:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-close-btn {
+        float: right;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .chat {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        
+        bottom: 0;
+    }
+
+    .chat-box {
+        width: 18em;
+        height: 20em;
+        margin: auto;
+    }
+
+    .chat-content {
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+    .chat-header {
+        border-radius: 5px 5px 0 0;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+        background: #CDDC39;
+        color: #fff;
+    }
+
+    .chat-main {
+        background: #fff;
+        overflow: auto;
+        padding: 0.5em;
+        height: 13.5em;
+    }
+
+    .chat-main p {
+        padding: 0.5em;
+        border-radius: 15px;
+        display: inline-block;
+
+        color: #fff;
+    }
+
+    .chat-footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0em 0.5em 0.5em 0.5em;
+        bottom: 0;
+    }
+
+    .chat-footer .textbox {
+        height: 2em;
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #CDDC39;
+    }
+
+    .chat-footer .button {
+        color: #fff;
+        margin-left: 1em;
+        float: right;
+        border: 0;
+        background: #CDDC39;
+        border-radius: 20px;
+        text-align: center;
+        padding-top: 4px;
+    }
+
+    .chat-footer .button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .outerDiv {
+        width: 100%;
+        display: block;
+    }
+
+    ::placeholder {
+        padding: 0.5em;
+        color: #BDBDBD;
+    }
+
+    .message_bot {
+        background: #CDDC39;
+        margin-right: 1em;
+    }
+
+    .message_user {
+        background: #BDBDBD;
+        float: right;
+        margin-left: 1em;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #BDBDBD;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #BDBDBD;
+    }
+
+    @media screen and (max-width: 600px) {
+        .chat {
+            width: 95%;
+            right: 2.5%;
+            left: 2.5%;
+        }
+    }
+</style>
+
+<body>
+    <!-- hide -->
+    <div class="chat" id="chatbox">
+        <div class="chat-box">
+            <div class="chat-header">Chatbot
+                <div class="chat-close-btn" id="chat_close_btn"><i class="fas fa-times-circle"></i></div>
+            </div>
+            <div class="chat-main" id="chat_main">
+            </div>
+            <div class="chat-footer">
+                <input type="text" class="textbox" id="chattext" placeholder="Type a message..." id="chat-box" />
+                <div class="button" id="send">Send</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*
+        structure:
+        array [
+         array [
+             0: part that should be included in user msg,
+             1: response from bot
+         ]
+        ]
+        */
+        var msgs = [
+            [
+                "anything else",
+                "Sorry, I did not get that. Try to re-phrase."
+            ],
+            [
+                "hello",
+                "Hello, how can I help?"
+            ],
+            [
+                "Do you understand life?",
+                "I don't really get Tic-Toc do you?"
+            ],
+            [
+                "I don't really get Tic-Toc do you?",
+                "No, I don't really get Tic-Toc do you?"
+            ],
+            [
+                "No, I don't really get Tic-Toc do you?",
+                "Nope, I don't really get Tic-Toc do you?"
+            ],
+        ]
+
+        function getResponse(text, callback) {
+            var found = false
+            setTimeout(function () {
+                for (var i in msgs) {
+                    if (text.toLowerCase().indexOf(msgs[i][0].toLowerCase()) > -1) {
+                        // send message
+                        addMessage("bot", msgs[i][1])
+                        found = true
+                        break
+                    } else if (i === msgs.length - 1 && !found) {
+                        // send not found msg
+                        addMessage("bot", msgs[0][1])
+                    }
+                }
+            }, 3000)
+        }
+        var chat_main = document.getElementById("chat_main")
+
+        document.getElementById("send").addEventListener("click", function () {
+            var outerDiv = document.createElement("div")
+            outerDiv.classList = ["outerDiv"]
+            var chattext = document.getElementById("chattext").value
+            addMessage("user", chattext)
+            getResponse(chattext)
+        })
+
+        document.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                var outerDiv = document.createElement("div")
+                outerDiv.classList = ["outerDiv"]
+                var chattext = document.getElementById("chattext").value
+                addMessage("user", chattext)
+                getResponse(chattext)
+            }
+        })
+
+        function addMessage(from, msg) {
+            if (msg !== "") {
+                var outerDiv = document.createElement("div")
+                outerDiv.classList = ["outerDiv"]
+                msgs.push({
+                    from: from,
+                    msg: msg
+                });
+                var element = document.createElement("p")
+                element.classList = ["message_" + from]
+                element.innerText = msg
+                outerDiv.appendChild(element)
+                chat_main.appendChild(outerDiv)
+                // scroll to last msg
+                chat_main.scrollTop = chat_main.scrollHeight;
+            }
+        }
+        var hidden = false
+        var chatHideBtn = document.getElementById('chat-hide')
+        var chatbox = document.getElementById('chatbox')
+        chatHideBtn.addEventListener("click", () => {
+            /* chatHideBtn.classList.add("hide")
+            chatbox.classList.remove("hide") */
+        });
+         document.getElementById('chat_close_btn').addEventListener("click", () => {
+            /* chatHideBtn.classList.remove("hide")
+            chatbox.classList.add("hide") */
+        });
+    </script>
+</body>
+
+</html>

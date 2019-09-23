@@ -5,10 +5,14 @@ layout: compress
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
     {% include head.html %}
 </head>
+
 <body>
     {% include nav.html %}
     <!-- Header -->
@@ -20,37 +24,55 @@ layout: compress
                     <h4>{{ page.date | date_to_string }}</h4>
                     {% if site.reading_time %}
                     <p class="reading-time">
-                      <i class="fa fa-clock-o"></i>
-                      {% include read-time.html %}
+                        <i class="fa fa-clock-o"></i>
+                        {% include read-time.html %}
                     </p><!-- /.entry-reading-time -->
                     {% endif %}
                     {% if page.project %}
                     <a class="btn zoombtn" href="{{site.url}}/projects/">
-                    {% else %}
-                    <a class="btn zoombtn" href="{{site.url}}/posts/">
-                    {% endif %}
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
+                        {% else %}
+                        <a class="btn zoombtn" href="{{site.url}}/posts/">
+                            {% endif %}
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
                 </div>
                 <div class="article-content" id="github-content">
                     {{ content }}
                 </div>
                 <script>$("#github-content").load("https://raw.githubusercontent.com/{{ site.github-url }}/{{ page.github_url }}/master/README.md", function () {
-                    document.getElementById('github-content').innerHTML = marked(document.getElementById('github-content').innerHTML);
+                        document.getElementById('github-content').innerHTML = marked(document.getElementById('github-content').innerHTML);
                     });
                 </script>
                 {{ content }}
                 <div class="entry-meta">
-                {% include meta.html %}
+                    {% include meta.html %}
                 </div>
             </div>
         </div>
-        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
+        <!-- {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section>
+        <!-- /#disqus_thread -- > {% endif %} -->
+
+        <section id="disqus_thread" class="animated fadeInUp ">
+            Comments:
+            
+        <div id="comments"></div>
+        
+        <p>Comments are using GitHub Issues. You can post by adding a comment on <a
+                href="https://github.com/{{ site.github-url }}/{{ page.github_url }}/issues/">GitHub</a> on the pinned issue.</p>
+
+            </section>
     </header>
     {% include scripts.html %}
+    <script>
+    var github = "{{ site.github-url }}";
+    var page = "{{ page.github_url }}";
+    var issue = "{{ page.github_issue }}";
+    </script>
+    <script src="http://127.0.0.1:4000/assets/js/github_comments.js"></script>
     {% if site.mathjax == true %}
     <!-- MathJax -->
     <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% endif %}
 </body>
+
 </html>

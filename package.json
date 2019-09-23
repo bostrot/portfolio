@@ -1,0 +1,12 @@
+{
+  "name": "website_eric",
+  "scripts": {
+    "setup": "bin/setup",
+    "local": "bundle exec jekyll serve --drafts",
+    "publish": "bin/deploy"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "npm": "^6.0.1"
+  }
+}
