@@ -1,0 +1,272 @@
+body {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Exo', sans-serif;
+  margin: auto;
+  color: #DFF7FC;
+  max-width: 50em;
+  min-width: 10em;
+  padding: 0.2em;
+  text-align: center;
+  background: #1a1b1e;
+}
+
+html {
+  background: #1a1b1e;
+}
+
+.heading {
+  padding-top: 2em;
+}
+
+.heading img {
+  max-width: 15em;
+}
+
+h2 {
+  padding-top: 1em;
+}
+
+.social {
+  border: 0;
+  margin: auto;
+  max-width: 20em;
+}
+
+#discord_image {
+  content: url('https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg');
+}
+
+#discord_image svg:hover {
+  fill: white;
+}
+
+.project {
+  position: relative;
+}
+
+.project img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.project:hover img {
+  opacity: 0.3
+}
+
+.project:hover p {
+  opacity: 1.0
+}
+
+.project p {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 128px);
+  justify-content: space-between;
+}
+
+.portfolio-done {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.portfolio-done-item {
+  width: 100%;
+  height: 128px;
+}
+
+.portfolio-done-item p {
+  line-height: 2em;
+}
+
+.social a {
+  border: 0;
+}
+
+.slogan {
+  padding: 0em;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #202225;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+ul.nav li {
+  float: right;
+}
+
+ul.nav li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.nav li a.active {
+  background-color: #2F3136;
+}
+
+ul.nav li.left {
+  padding-left: 0;
+  float: left;
+}
+
+.card-projects {
+  margin-top: 1em;
+  display: grid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background: #202225;
+}
+
+.card-projects:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icon-area i {
+  width: 2em;
+  height: 2em;
+  padding-top: .5em;
+  border-radius: 10%;
+  background: #1a1b1e;
+}
+
+.icon-area i:hover {
+  cursor: pointer;
+  background: #202225;
+}
+
+.icon-area a {
+  color: #fff;
+}
+
+.bio {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.bio table {
+  margin: auto;
+}
+
+.bio table .left {
+  padding-right: .4em;
+}
+
+.bio table .right {
+  width: 5em;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #1a1b1e;
+}
+
+.card {
+  margin-top: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background: #202225;
+  padding: 1em;
+  height: 80%;
+  text-align: center;
+  color: #fff;
+}
+
+.row {
+  padding: 1em;
+}
+
+.card hr {
+  border-top: 1px solid grey;
+  width: 60%;
+  margin: 1em auto;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card img {
+  width: 8em;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  text-align: left;
+  grid-column: 2 / 20;
+  padding: 2px 16px;
+}
+
+@media screen and (max-width: 600px) {
+
+  ul.nav li.right,
+  ul.nav li {
+    float: none;
+  }
+
+  ul.nav li.left {
+    display: none;
+  }
+
+  .portfolio-done {
+    grid-template-columns: auto;
+    justify-content: initial;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
+  .portfolio-done-item {
+    width: 100%;
+  }
+}
+
+
+.media-body {
+  color: #fff !important;
+}
+
+.table {
+  color: #fff !important;
+  font-weight: lighter;
+}
+
+.media img {
+  height: 3em !important;
+}
