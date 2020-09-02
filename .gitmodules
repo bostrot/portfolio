@@ -1,0 +1,6 @@
+[submodule "fontawesome"]
+	path = fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "bootstrap"]
+	path = bootstrap
+	url = https://github.com/twbs/bootstrap.git
