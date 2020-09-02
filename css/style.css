@@ -10,6 +10,10 @@ body {
   background: #1a1b1e;
 }
 
+a {
+  text-decoration-line: none;
+}
+
 html {
   background: #1a1b1e;
 }
@@ -155,9 +159,11 @@ ul.nav li.left {
 
 .icon-area i {
   width: 2em;
-  height: 2em;
   border-radius: 10%;
   background: #1a1b1e;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: .1em;
 }
 
 .icon-area i:hover {
@@ -170,11 +176,10 @@ ul.nav li.left {
 }
 
 .bio {
-  margin-top: 1em;
-  margin-bottom: 1em;
   font-style: normal;
   font-weight: 900;
   font-size: 2rem;
+  margin: 1em;
 }
 
 .bio table {
@@ -204,18 +209,16 @@ ul.nav li.left {
   color: #fff;
 }
 
+.short_desc {
+  border-top: 1px solid grey;
+  padding: 1em;
+  border-bottom: 1px solid grey;
+  width: 60%;
+  margin: auto;
+}
+
 .row {
   padding: 1em;
-}
-
-.card hr {
-  border-top: 1px solid grey;
-  width: 60%;
-  margin: 1em auto;
-}
-
-.card p {
-  margin-bottom: 0;
 }
 
 .card img {
