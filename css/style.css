@@ -209,6 +209,10 @@ ul.nav li.left {
   color: #fff;
 }
 
+.nomargin {
+  margin: 0;
+}
+
 .short_desc {
   border-top: 1px solid grey;
   padding: 1em;

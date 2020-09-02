@@ -13,7 +13,6 @@
     }
     .stars {
         color: #6c757d !important;
-        padding-right: 1em;
     }
     #github_projects .card {
         padding: 1.5em;
@@ -21,6 +20,10 @@
     }
     #github_projects .card a {
         color: #ffffff;
+    }
+    #github_projects .card p {
+        margin: 0;
+        width: 90%;
     }
   `;
   fetch("https://api.github.com/users/bostrot/repos")
