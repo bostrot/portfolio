@@ -8,11 +8,14 @@
   };
 
   const style = `
-    .stargazers {
+    #github_projects .stargazers {
         padding-right: .5em;
     }
-    .stars {
+    #github_projects .stars {
         color: #6c757d !important;
+    }
+    #github_projects a {
+        text-decoration-line: none;
     }
     #github_projects .card {
         padding: 1.5em;

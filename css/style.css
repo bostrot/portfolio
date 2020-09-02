@@ -11,7 +11,12 @@ body {
 }
 
 a {
+  color: #ffffff;
   text-decoration-line: none;
+}
+
+footer a {
+  color: #007bff;
 }
 
 html {
