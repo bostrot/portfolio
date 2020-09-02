@@ -42,3 +42,7 @@ Add this to your website
         </table>
     </div>
     <script src="js/slide.js"></script>
+
+### Design
+
+<img src="https://raw.githubusercontent.com/bostrot/portfolio/master/img/erictrenkel.com.png" />
