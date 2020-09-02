@@ -156,7 +156,6 @@ ul.nav li.left {
 .icon-area i {
   width: 2em;
   height: 2em;
-  padding-top: .5em;
   border-radius: 10%;
   background: #1a1b1e;
 }
@@ -188,6 +187,7 @@ ul.nav li.left {
 
 .bio table .right {
   width: 5em;
+  height: 1.7em;
   cursor: pointer;
   border-radius: 5px;
   background: #1a1b1e;
