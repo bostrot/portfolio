@@ -1,0 +1,27 @@
+#donate {
+    text-decoration-line: underline;
+}
+
+#donate:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15em 0;
+}
+
+.modal .card {
+    vertical-align: middle;
+    margin: auto;
+    height: 15em;
+    width: 40em;
+    opacity: 1;
+}

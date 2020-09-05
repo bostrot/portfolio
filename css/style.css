@@ -41,14 +41,6 @@ h2 {
   max-width: 20em;
 }
 
-#discord_image {
-  content: url('https://discordapp.com/assets/e4923594e694a21542a489471ecffa50.svg');
-}
-
-#discord_image svg:hover {
-  fill: white;
-}
-
 .project {
   position: relative;
 }

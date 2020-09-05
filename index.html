@@ -12,9 +12,9 @@
     <title>Eric Trenkel</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/donation.css" />
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 
     <!-- Fonts -->
@@ -61,8 +61,21 @@
         <div id="github_projects" class="card">
             Loading...
         </div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="card">
+                <h2>Want to help me create more awesome projects?<br />Donate now &hearts;</h2>
+                <div class="icon-area">
+                    <a href="https://www.patreon.com/erictrenkel" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
+                    <a href="http://paypal.me/bostrot" target="_blank"><i class="fab fa-paypal fa-3x"></i></a>
+                    <a href="https://github.com/sponsors/bostrot" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+
         <div class="card">
-            <p class="nomargin">I love dynamic sites.</p>
+            <p class="nomargin">I love dynamic sites. <a id="donate">Want to help me?</a></p>
         </div>
     </div>
     <!-- Footer -->
@@ -77,10 +90,10 @@
             &copy; 2019-2020 erictrenkel.com
         </p>
         <!-- JS Imports -->
+        <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/slide.js"></script>
         <script src="js/github.js"></script>
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/donation.js"></script>
         <!-- Analytics -->
         <script async defer data-domain="erictrenkel.com" src="https://analytics.bostrot.com/js/plausible.js"></script>
     </footer>
