@@ -15,13 +15,17 @@
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
-    padding: 15em 0;
+    padding: 9em 0;
 }
 
 .modal .card {
     vertical-align: middle;
     margin: auto;
-    height: 15em;
+    height: 30em;
     width: 40em;
     opacity: 1;
+}
+
+.refer-area {
+    text-decoration-line: underline;
 }

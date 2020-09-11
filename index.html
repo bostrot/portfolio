@@ -20,8 +20,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet" />
+    
+    <!-- Analytics -->
+    <script async defer data-domain="erictrenkel.com" src="https://analytics.bostrot.com/js/plausible.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script> 
 </head>
-
 
 <body>
     <!-- Body -->
@@ -49,13 +52,13 @@
                 </table>
             </div>
             <div class="icon-area">
-                <a href="https://stackoverflow.com/users/5237072/bostrot" target="_blank"><i class="fab fa-stack-overflow fa-3x"></i></a>
-                <a href="https://twitter.com/bostrot_" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
-                <a href="https://senpai.club/" target="_blank"><i class="fab fa-html5 fa-3x"></i></a>
-                <a href="https://github.com/bostrot" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-                <a href="https://linkedin.com/in/erictrenkel" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-                <a href="https://gitlab.com/bostrot" target="_blank"><i class="fab fa-gitlab fa-3x"></i></a>
-                <a href="https://discord.gg/fZvGq3D" target="_blank"><i class="fab fa-discord fa-3x"></i></a>
+                <a href="https://stackoverflow.com/users/5237072/bostrot" onclick="plausible('stackoverflow')" target="_blank"><i class="fab fa-stack-overflow fa-3x"></i></a>
+                <a href="https://twitter.com/bostrot_" onclick="plausible('twitter')" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+                <a href="https://senpai.club/" onclick="plausible('blog')" target="_blank"><i class="fab fa-html5 fa-3x"></i></a>
+                <a href="https://github.com/bostrot" onclick="plausible('github')" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                <a href="https://linkedin.com/in/erictrenkel" onclick="plausible('linkedin')" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                <a href="https://gitlab.com/bostrot" onclick="plausible('gitlab')" target="_blank"><i class="fab fa-gitlab fa-3x"></i></a>
+                <a href="https://discord.gg/fZvGq3D" onclick="plausible('discord')" target="_blank"><i class="fab fa-discord fa-3x"></i></a>
             </div>
         </div>
         <div id="github_projects" class="card">
@@ -67,15 +70,21 @@
             <div class="card">
                 <h2>Want to help me create more awesome projects?<br />Donate now &hearts;</h2>
                 <div class="icon-area">
-                    <a href="https://www.patreon.com/erictrenkel" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
-                    <a href="http://paypal.me/bostrot" target="_blank"><i class="fab fa-paypal fa-3x"></i></a>
-                    <a href="https://github.com/sponsors/bostrot" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                    <a href="https://www.patreon.com/erictrenkel" onclick="plausible('discord')" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
+                    <a href="http://paypal.me/bostrot" onclick="plausible('discord')" target="_blank"><i class="fab fa-paypal fa-3x"></i></a>
+                    <a href="https://github.com/sponsors/bostrot" onclick="plausible('discord')" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+                <h2>OR use any of my affiliate links:</h2>
+                <div class="refer-area">
+                    <a href="https://www.vultr.com/?ref=8491644-6G" onclick="plausible('hosting')" target="_blank">Get $100 free VPS credit on Vultr</a>
+                    <a href="http://paypal.me/bostrot" onclick="plausible('paypal')" target="_blank"></a>
+                    <a href="https://github.com/sponsors/bostrot" onclick="plausible('github-sponsors')" target="_blank"></a>
                 </div>
             </div>
         </div>
 
         <div class="card">
-            <p class="nomargin">I love dynamic sites. <a id="donate">Want to help me?</a></p>
+            <p class="nomargin">I love dynamic sites. <a id="donate" onclick="plausible('donate')">Want to help me?</a></p>
         </div>
     </div>
     <!-- Footer -->
@@ -84,7 +93,8 @@
             Created with &hearts; by Eric
         </p>
         <p>
-            Contact me at <a href="mailto:web@bostrot.com">web@bostrot.com</a> or <a href="http://t.me/bostrot_bot">on Telegram</a>
+            Contact me at <a href="mailto:web@bostrot.com" onclick="plausible('mail')">web@bostrot.com</a> or 
+            <a href="http://t.me/bostrot_bot" onclick="plausible('telegram')">on Telegram</a>
         </p>
         <p>
             &copy; 2019-2020 erictrenkel.com
@@ -94,8 +104,6 @@
         <script src="js/slide.js"></script>
         <script src="js/github.js"></script>
         <script src="js/donation.js"></script>
-        <!-- Analytics -->
-        <script async defer data-domain="erictrenkel.com" src="https://analytics.bostrot.com/js/plausible.js"></script>
     </footer>
 </body>
 

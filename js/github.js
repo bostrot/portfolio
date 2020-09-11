@@ -49,7 +49,7 @@
                   projectDiv.innerHTML = `
                     <div class="media pt-3">
                         <div class="media-body pb-3 mb-0 lh-125">
-                            <a href="${project.html_url}" target="_blank">
+                            <a href="${project.html_url}" onclick="plausible('${project.name}')" target="_blank">
                                 <strong class="d-block text-gray-dark">${project.name}</strong>
                             </a>
                             <div class="stars" style="float:right;">
