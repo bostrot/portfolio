@@ -40,7 +40,7 @@
         --donation-modal-width: 600px;
         --donation-modal-top: 50%;
     }
-    
+
     .modal .card {
         vertical-align: middle;
         height: var(--donation-modal-height);

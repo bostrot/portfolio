@@ -21,9 +21,9 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-  --main-bg-color: #fff;
-  --main-ac-color: #fff;
-  --main-txt-color: #000;
+    --main-bg-color: #fff;
+    --main-ac-color: #fff;
+    --main-txt-color: #000;
   }
 }
 
@@ -71,7 +71,8 @@ html {
   border-radius: var(--main-border-radius);
 }
 
-.grid-item h1, .grid-item-start h1 {
+.grid-item h1,
+.grid-item-start h1 {
   margin: var(--main-bio-margin);
 }
 
@@ -85,29 +86,36 @@ html {
   border-radius: var(--main-border-radius);
   background: var(--main-bg-color);
 }
+
 /* End Slide */
 
 /* GitHub Projects */
 #github_projects .stargazers {
   padding-right: var(--padding-small);
 }
+
 #github_projects .stars {
   color: #6c757d !important;
 }
+
 #github_projects a {
   text-transform: capitalize;
   text-decoration-line: none;
 }
+
 #github_projects .card {
   padding: var(--padding-big);
   text-align: left;
 }
+
 #github_projects .card a {
   color: #ffffff;
 }
+
 #github_projects .card p {
   margin: 0;
 }
+
 /* End GitHub */
 
 .social {
@@ -158,7 +166,7 @@ html {
   display: grid;
   grid-template-columns: 24% 24% 24% 24%;
   justify-content: space-between;
-/*   margin-bottom: 2em; */
+  /*   margin-bottom: 2em; */
 }
 
 .portfolio-done-item {
@@ -282,6 +290,7 @@ ul.nav li.left {
     --main-container-width: 95%;
     --mobile-width: 90%;
   }
+
   ul.nav li.right,
   ul.nav li {
     float: none;
@@ -297,7 +306,7 @@ ul.nav li.left {
     width: 100%;
   }
 
-   .portfolio-done-item { 
+  .portfolio-done-item {
     width: 100%;
   }
 
@@ -312,7 +321,7 @@ ul.nav li.left {
   .short_desc {
     width: var(--mobile-width);
   }
-  
+
   footer {
     width: var(--main-container-width);
   }

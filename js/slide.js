@@ -8,7 +8,9 @@ function carousel() {
         rawListItems[i].style = "display: none;";
     }
     slideIndex++;
-    if (slideIndex > rawListItems.length || slideIndex == 1) {slideIndex = 2}
-    rawListItems[slideIndex-1].style.display = "block";
+    if (slideIndex > rawListItems.length || slideIndex == 1) {
+        slideIndex = 2
+    }
+    rawListItems[slideIndex - 1].style.display = "block";
     setTimeout(carousel, 1000);
 }

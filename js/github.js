@@ -7,9 +7,9 @@
       }
   };
 
-    String.prototype.replaceAt = function(index, replacement) {
-        return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-    }
+  String.prototype.replaceAt = function (index, replacement) {
+      return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+  }
   fetch("https://api.github.com/users/bostrot/repos")
       .then(response => response.json())
       .then(projects => {
@@ -27,7 +27,7 @@
               if (project != undefined) {
                   if (project.description == null)
                       project.description = "No description.";
-                      project.name = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
+                  project.name = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
                   projectDiv.innerHTML = `
                     <div class="media pt-3">
                         <div class="media-body pb-3 mb-0 lh-125">
