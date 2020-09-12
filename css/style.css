@@ -16,7 +16,8 @@ a {
 }
 
 footer a {
-  color: #007bff;
+  color: #fff;
+  text-decoration-line: underline;
 }
 
 html {
@@ -33,6 +34,9 @@ html {
 
 h2 {
   padding-top: 1em;
+}
+h1 {
+  margin: 1em;
 }
 
 .social {
@@ -155,6 +159,7 @@ ul.nav li.left {
 }
 
 .icon-area i {
+  justify-content: space-between;
   width: 2em;
   border-radius: 10%;
   background: #1a1b1e;
@@ -236,6 +241,10 @@ ul.nav li.left {
   text-align: left;
   grid-column: 2 / 20;
   padding: 2px 16px;
+}
+
+.container > .card {
+  padding: 1.5 !important;
 }
 
 @media screen and (max-width: 600px) {
