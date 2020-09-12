@@ -7,29 +7,6 @@
       }
   };
 
-  const style = `
-    #github_projects .stargazers {
-        padding-right: .5em;
-    }
-    #github_projects .stars {
-        color: #6c757d !important;
-    }
-    #github_projects a {
-        text-transform: capitalize;
-        text-decoration-line: none;
-    }
-    #github_projects .card {
-        padding: 1.5em;
-        text-align: left;
-    }
-    #github_projects .card a {
-        color: #ffffff;
-    }
-    #github_projects .card p {
-        margin: 0;
-        width: 90%;
-    }
-  `;
     String.prototype.replaceAt = function(index, replacement) {
         return this.substr(0, index) + replacement + this.substr(index + replacement.length);
     }
@@ -65,9 +42,7 @@
                         <p>${project.description}</p>
                     </div>
                     `;
-                  projectDiv.style = style;
                   projectsDiv.appendChild(projectDiv);
-                  projectsDiv.innerHTML += "<style>" + style + "</style>"
               }
           }
       });

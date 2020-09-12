@@ -1,62 +1,118 @@
+:root {
+  --main-padding: 15px;
+  --main-margin: 10px;
+  --main-img-size: 150px;
+  --main-bio-size: 200px;
+  --main-bio-margin: 5px;
+  --main-icon-width: 80px;
+  --main-border-radius: 5px;
+  --padding-big: 20px;
+  --padding-small: 5px;
+  --main-container-width: 750px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #1a1b1e;
+    --main-ac-color: #202225;
+    --main-txt-color: #DFF7FC;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --main-bg-color: #fff;
+  --main-ac-color: #fff;
+  --main-txt-color: #000;
+  }
+}
+
 body {
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Exo', sans-serif;
   margin: auto;
-  color: #DFF7FC;
-  max-width: 50em;
-  min-width: 10em;
-  padding: 0.2em;
+  color: var(--main-txt-color);
   text-align: center;
-  background: #1a1b1e;
+  background: var(--main-bg-color);
 }
 
 a {
-  color: #ffffff;
+  color: var(--main-txt-color);
   text-decoration-line: none;
 }
 
 footer a {
-  color: #fff;
+  color: var(--main-txt-color);
   text-decoration-line: underline;
 }
 
 html {
-  background: #1a1b1e;
+  background: var(--main-bg-color);
 }
 
-.heading {
-  padding-top: 2em;
+/* Slide */
+.bio {
+  font-style: normal;
+  font-weight: 900;
+  padding: var(--main-padding);
 }
 
-.heading img {
-  max-width: 15em;
-}
-
-h2 {
-  padding-top: 1em;
-}
-h1 {
-  margin: 1em;
-}
-
-/* TODO: move to slide.js */
 .grid-container {
-  margin: auto;
+  margin: var(--main-margin);
   display: grid;
   justify-content: center;
-  grid-template-columns: 6em 5em;
+  grid-template-columns: auto auto;
+}
+
+.grid-item {
+  width: var(--main-bio-size);
+  margin-left: var(--main-padding);
+  background: var(--main-bg-color);
+  cursor: pointer;
+  border-radius: var(--main-border-radius);
+}
+
+.grid-item h1, .grid-item-start h1 {
+  margin: var(--main-bio-margin);
 }
 
 .grid-item-start {
   grid-row-start: 1;
   grid-row-end: 8;
 }
-/* End TODO */
+
+.bio table .right {
+  cursor: pointer;
+  border-radius: var(--main-border-radius);
+  background: var(--main-bg-color);
+}
+/* End Slide */
+
+/* GitHub Projects */
+#github_projects .stargazers {
+  padding-right: var(--padding-small);
+}
+#github_projects .stars {
+  color: #6c757d !important;
+}
+#github_projects a {
+  text-transform: capitalize;
+  text-decoration-line: none;
+}
+#github_projects .card {
+  padding: var(--padding-big);
+  text-align: left;
+}
+#github_projects .card a {
+  color: #ffffff;
+}
+#github_projects .card p {
+  margin: 0;
+}
+/* End GitHub */
 
 .social {
   border: 0;
   margin: auto;
-  max-width: 20em;
 }
 
 .project {
@@ -102,36 +158,23 @@ h1 {
   display: grid;
   grid-template-columns: 24% 24% 24% 24%;
   justify-content: space-between;
-  margin-bottom: 2em;
+/*   margin-bottom: 2em; */
 }
 
 .portfolio-done-item {
-  width: 100%;
   height: 128px;
-}
-
-.portfolio-done-item p {
-  line-height: 2em;
 }
 
 .social a {
   border: 0;
 }
 
-.slogan {
-  padding: 0em;
-}
-
-footer {
-  margin-top: 2em;
-}
-
 ul.nav {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   overflow: hidden;
-  background-color: #202225;
+  background-color: var(--main-ac-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
@@ -143,7 +186,6 @@ ul.nav li {
 ul.nav li a {
   display: block;
   color: white;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -156,16 +198,14 @@ ul.nav li a.active {
 }
 
 ul.nav li.left {
-  padding-left: 0;
   float: left;
 }
 
 .card-projects {
-  margin-top: 1em;
   display: grid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  background: #202225;
+  background: var(--main-ac-color);
 }
 
 .card-projects:hover {
@@ -174,55 +214,30 @@ ul.nav li.left {
 
 .icon-area i {
   justify-content: space-between;
-  width: 2em;
-  border-radius: 10%;
-  background: #1a1b1e;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  margin-top: .1em;
+  width: var(--main-icon-width);
+  background: var(--main-bg-color);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  border-radius: var(--main-border-radius);
 }
 
 .icon-area i:hover {
   cursor: pointer;
-  background: #202225;
+  background: var(--main-ac-color);
 }
 
 .icon-area a {
-  color: #fff;
-}
-
-.bio {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 2rem;
-  margin: 1em;
-}
-
-.bio table {
-  margin: auto;
-}
-
-.bio table .left {
-  padding-right: .4em;
-}
-
-.bio table .right {
-  width: 5em;
-  height: 1.7em;
-  cursor: pointer;
-  border-radius: 5px;
-  background: #1a1b1e;
+  color: var(--main-txt-color);
 }
 
 .card {
-  margin-top: 1em;
+  margin-top: var(--main-padding);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  background: #202225;
-  padding: 1em;
-  height: 80%;
+  background: var(--main-ac-color);
+  padding: var(--main-padding);
   text-align: center;
-  color: #fff;
+  color: var(--main-txt-color);
 }
 
 .nomargin {
@@ -231,19 +246,15 @@ ul.nav li.left {
 
 .short_desc {
   border-top: 1px solid grey;
-  padding: 1em;
+  padding: var(--main-padding);
   border-bottom: 1px solid grey;
   width: 60%;
   margin: auto;
 }
 
-.row {
-  padding: 1em;
-}
-
 .card img {
-  width: 8em;
   margin: auto;
+  max-width: var(--main-img-size);
   border-radius: 50%;
 }
 
@@ -252,17 +263,25 @@ ul.nav li.left {
 }
 
 .container {
-  text-align: left;
-  grid-column: 2 / 20;
-  padding: 2px 16px;
+  margin: auto;
+  width: var(--main-container-width);
 }
 
-.container > .card {
-  padding: 1.5 !important;
+.media-body {
+  color: var(--main-txt-color) !important;
 }
 
-@media screen and (max-width: 600px) {
+.table {
+  color: var(--main-txt-color) !important;
+  font-weight: lighter;
+}
 
+@media screen and (max-width: 700px) {
+  :root {
+    --mobile-margin: 5px;
+    --main-container-width: 95%;
+    --mobile-width: 90%;
+  }
   ul.nav li.right,
   ul.nav li {
     float: none;
@@ -275,25 +294,26 @@ ul.nav li.left {
   .portfolio-done {
     grid-template-columns: auto;
     justify-content: initial;
-    margin-bottom: 2em;
     width: 100%;
   }
 
-  .portfolio-done-item {
+   .portfolio-done-item { 
     width: 100%;
   }
-}
 
+  .grid-container {
+    grid-template-columns: auto;
+  }
 
-.media-body {
-  color: #fff !important;
-}
+  .icon-area i {
+    margin-top: var(--mobile-margin);
+  }
 
-.table {
-  color: #fff !important;
-  font-weight: lighter;
-}
-
-.media img {
-  height: 3em !important;
+  .short_desc {
+    width: var(--mobile-width);
+  }
+  
+  footer {
+    width: var(--main-container-width);
+  }
 }
