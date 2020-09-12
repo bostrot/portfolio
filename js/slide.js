@@ -3,7 +3,7 @@ carousel();
 
 function carousel() {
     var items = [];
-    var rawListItems = document.getElementsByClassName("bio")[0].getElementsByTagName("a");
+    var rawListItems = document.getElementsByClassName("bio")[0].getElementsByTagName("div");
     for (var i = 1; i < rawListItems.length; i++) {
         rawListItems[i].style = "display: none;";
     }

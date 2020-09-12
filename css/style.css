@@ -39,6 +39,20 @@ h1 {
   margin: 1em;
 }
 
+/* TODO: move to slide.js */
+.grid-container {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 6em 5em;
+}
+
+.grid-item-start {
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+/* End TODO */
+
 .social {
   border: 0;
   margin: auto;
