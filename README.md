@@ -23,23 +23,15 @@ Add this to your website
 
 Add this to your website
 
-    <div class="bio">
-        <table cellspacing="0">
-            <tr>
-                <td class="left">
-                    <a>I code with </a>
-                </td>
-                <td class="right">
-                    <a>NodeJs</a>
-                    <a>Flutter</a>
-                    <a>C++</a>
-                    <a>Docker</a>
-                    <a>Compose</a>
-                    <a>MongoDB</a>
-                    <a>HTML5</a>
-                </td>
-            </tr>
-        </table>
+    <div class="bio grid-container">
+        <div class="grid-item-start"><h1>I code with</h1></div>
+        <div class="grid-item"><h1>NodeJs</h1></div>
+        <div class="grid-item"><h1>Flutter</h1></div>
+        <div class="grid-item"><h1>C++</h1></div>
+        <div class="grid-item"><h1>Docker</h1></div>
+        <div class="grid-item"><h1>Compose</h1></div>
+        <div class="grid-item"><h1>MongoDB</h1></div>
+        <div class="grid-item"><h1>HTML5</h1></div>
     </div>
     <script src="js/slide.js"></script>
 
