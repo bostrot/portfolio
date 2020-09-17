@@ -109,7 +109,7 @@ html {
 }
 
 #github_projects .card a {
-  color: #ffffff;
+  color: var(--main-txt-color);
 }
 
 #github_projects .card p {
