@@ -11,11 +11,10 @@
     <meta name="author" content="Eric Trenkel">
 
     <title>Eric Trenkel</title>
-
     <!-- Styles -->
-    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/donation.css" />
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/donation.css" />
     <link rel="shortcut icon" type="image/png" href="favicon.ico" />
 
     <!-- Fonts -->
@@ -70,7 +69,7 @@
                 <a href="https://twitter.com/bostrot_" onclick="plausible('twitter')" target="_blank"><i
                         class="fab fa-twitter fa-3x"></i></a>
                 <a href="https://senpai.club/" onclick="plausible('blog')" target="_blank"><i
-                        class="fas fa-rss-square fa-3x"></i></i></a>
+                        class="fas fa-rss-square fa-3x"></i></a>
                 <a href="https://github.com/bostrot" onclick="plausible('github')" target="_blank"><i
                         class="fab fa-github fa-3x"></i></a>
                 <a href="https://linkedin.com/in/erictrenkel" onclick="plausible('linkedin')" target="_blank"><i
@@ -84,35 +83,27 @@
         <div id="github_projects" class="card">
             Loading...
         </div>
-
-        <!-- Modal -->
-        <div class="modal">
-            <div class="card">
-                <h2>Want to help me create more awesome projects?<br />Donate now &hearts;</h2>
-                <div class="icon-area">
-                    <a href="https://www.patreon.com/erictrenkel" onclick="plausible('patreon')" target="_blank"><i
-                            class="fab fa-patreon fa-3x"></i></a>
-                    <a href="http://paypal.me/bostrot" onclick="plausible('paypal')" target="_blank"><i
-                            class="fab fa-paypal fa-3x"></i></a>
-                    <a href="https://github.com/sponsors/bostrot" onclick="plausible('github-sponsors')"
-                        target="_blank"><i class="fab fa-github fa-3x"></i></a>
-                </div>
-                <h2>OR use any of my affiliate links:</h2>
-                <div class="refer-area">
-                    <a href="https://www.vultr.com/?ref=8491644-6G" onclick="plausible('hosting')" target="_blank">Get
-                        $100 free VPS credit on Vultr</a>
-                    <br />
-                    <a href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=46255&url_id=902"
-                        onclick="plausible('nordvpn')" target="_blank">Browse with NordVPN's no-logs policy</a>
-                </div>
-            </div>
-        </div>
-
         <div class="card">
-            <p class="nomargin">I love dynamic sites. <a id="donate" onclick="plausible('donate')">Want to help me?</a>
+            <p class="nomargin">I love dynamic sites. <a id="donate" onclick="plausible('donate');">Want to help me?</a>
             </p>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="card">
+            <h2>Want to help me create more awesome projects?<br />Donate now &hearts;</h2>
+            <div class="icon-area">
+                <a href="https://www.patreon.com/erictrenkel" onclick="plausible('patreon')" target="_blank"><i
+                        class="fab fa-patreon fa-3x"></i></a>
+                <a href="http://paypal.me/bostrot" onclick="plausible('paypal')" target="_blank"><i
+                        class="fab fa-paypal fa-3x"></i></a>
+                <a href="https://github.com/sponsors/bostrot" onclick="plausible('github-sponsors')" target="_blank"><i
+                        class="fab fa-github fa-3x"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>
@@ -123,7 +114,11 @@
             <a href="http://t.me/bostrot_bot" onclick="plausible('telegram')">on Telegram</a>
         </p>
         <p>
-            &copy; 2019-2020 erictrenkel.com
+            <a href="/privacy.html" onclick="plausible('privacy')">Privacy</a> | 
+            <a href="/chat.html" onclick="plausible('chat')">Chat</a>
+        </p>
+        <p>
+            &copy; 2019-2021 erictrenkel.com
         </p>
         <!-- JS Imports -->
         <script src="js/jquery-3.5.1.min.js"></script>
@@ -131,18 +126,6 @@
         <script src="js/github.js"></script>
         <script src="js/donation.js"></script>
     </footer>
-    
-    <!-- Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108863569-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-108863569-5');
-    </script>
-    <script id="chatScript" src="https://chat.erictrenkel.com/chat.js"></script>
 </body>
-
 
 </html>

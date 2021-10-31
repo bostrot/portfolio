@@ -1,7 +1,7 @@
 :root {
     --donation-modal-height: 350px;
     --donation-modal-width: 600px;
-    --donation-modal-top: 30%;
+    --donation-modal-top: 50%;
 }
 
 #donate {
@@ -21,13 +21,12 @@
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
-    padding: var(--donation-modal-top) 0;
 }
 
 .modal .card {
-    margin: auto;
     width: var(--donation-modal-width);
     opacity: 1;
+    margin: var(--donation-modal-top) auto !important;
 }
 
 .refer-area {
@@ -43,9 +42,7 @@
 
     .modal .card {
         vertical-align: middle;
-        height: var(--donation-modal-height);
         width: 80%;
-        height: 40%;
         opacity: 1;
     }
 
@@ -53,8 +50,12 @@
         display: none;
         position: absolute;
         margin: auto;
-        height: 150%;
+        height: 100%;
         width: 100%;
         background: rgba(0, 0, 0, 0.4);
+    }
+
+    html, body {
+        height: 100% !important;
     }
 }

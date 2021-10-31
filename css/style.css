@@ -40,6 +40,10 @@ a {
   text-decoration-line: none;
 }
 
+footer {
+  padding-bottom: 5px;
+}
+
 footer a {
   color: var(--main-txt-color);
   text-decoration-line: underline;
