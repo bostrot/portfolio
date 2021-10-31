@@ -1,6 +1,6 @@
 ### Portfolio Site
 
-written in pure HTML5, CSS with Bootstrap and Fontawesome.
+written in pure HTML5, CSS with Fontawesome.
 
 DEMO: https://erictrenkel.com
 
