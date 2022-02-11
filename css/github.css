@@ -1,0 +1,60 @@
+/* GitHub Projects */
+.hoverable:hover {
+    background-color: #161616;
+    cursor: pointer;
+}
+
+#github_projects .stargazers {
+    padding-right: var(--padding-small);
+}
+
+#github_projects .stars {
+    color: #6c757d !important;
+}
+
+#github_projects a {
+    text-transform: capitalize;
+    text-decoration-line: none;
+}
+
+.github-modal>.card {
+    height: 80% !important;
+    overflow-y: auto;
+}
+
+#github_projects .card {
+    padding: var(--padding-big);
+    text-align: left;
+}
+
+#github_projects .card a {
+    color: var(--main-txt-color);
+}
+
+#github_projects .card p {
+    margin: 0;
+}
+
+.github-hidden {
+    display: none;
+}
+
+.github-modal img {
+    max-width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}

@@ -1,5 +1,5 @@
 :root {
-    --donation-modal-height: 350px;
+    --donation-modal-height: 200px;
     --donation-modal-width: 600px;
     --donation-modal-top: 50%;
 }
@@ -12,8 +12,11 @@
     cursor: pointer;
 }
 
-.modal {
+#donateModal {
     display: none;
+}
+
+.modal {
     top: 0;
     right: 0;
     position: absolute;
@@ -24,9 +27,15 @@
 }
 
 .modal .card {
-    width: var(--donation-modal-width);
     opacity: 1;
-    margin: var(--donation-modal-top) auto !important;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: var(--donation-modal-height);
+    width: var(--donation-modal-width);
 }
 
 .refer-area {
@@ -47,7 +56,6 @@
     }
 
     .modal {
-        display: none;
         position: absolute;
         margin: auto;
         height: 100%;

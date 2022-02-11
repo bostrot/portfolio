@@ -15,7 +15,7 @@
   :root {
     --main-bg-color: #1a1b1e;
     --main-ac-color: #202225;
-    --main-txt-color: #DFF7FC;
+    --main-txt-color: #a6ced6;
   }
 }
 
@@ -93,35 +93,6 @@ html {
 
 /* End Slide */
 
-/* GitHub Projects */
-#github_projects .stargazers {
-  padding-right: var(--padding-small);
-}
-
-#github_projects .stars {
-  color: #6c757d !important;
-}
-
-#github_projects a {
-  text-transform: capitalize;
-  text-decoration-line: none;
-}
-
-#github_projects .card {
-  padding: var(--padding-big);
-  text-align: left;
-}
-
-#github_projects .card a {
-  color: var(--main-txt-color);
-}
-
-#github_projects .card p {
-  margin: 0;
-}
-
-/* End GitHub */
-
 .social {
   border: 0;
   margin: auto;
@@ -189,6 +160,10 @@ ul.nav {
   background-color: var(--main-ac-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+}
+
+.hidden {
+  display: none;
 }
 
 ul.nav li {
@@ -264,7 +239,7 @@ ul.nav li.left {
   margin: auto;
 }
 
-.card img {
+.profile img {
   margin: auto;
   max-width: var(--main-img-size);
   border-radius: 50%;
@@ -281,6 +256,7 @@ ul.nav li.left {
 
 .media-body {
   color: var(--main-txt-color) !important;
+  margin-bottom: 10px;
 }
 
 .table {

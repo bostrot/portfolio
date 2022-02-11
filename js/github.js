@@ -1,3 +1,9 @@
+  window.onload = function () {
+      let script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js";
+      document.body.appendChild(script);
+  };
+
   // Lambda sort factory function
   const sortOnKey = (key, desc) => {
       return (a, b) => {
@@ -20,17 +26,17 @@
           // Empty div
           projectsDiv.innerHTML = "";
           projectsDiv.classList = "";
-          for (let i = 0; i < 4; i++) {
+          for (let i = 0; i < 6; i++) {
               let projectDiv = document.createElement("div");
-              projectDiv.classList = "card";
+              projectDiv.classList = "card hoverable";
               let project = projects[i];
               if (project != undefined) {
                   if (project.description == null)
                       project.description = "No description.";
                   project.name = project.name.replaceAll('_', ' ').replaceAll('-', ' ');
                   projectDiv.innerHTML = `
-                    <div class="media pt-3">
-                        <div class="media-body pb-3 mb-0 lh-125">
+                    <div class="media">
+                        <div class="media-body">
                             <a href="${project.html_url}" onclick="plausible('${project.name}')" target="_blank">
                                 <strong class="d-block text-gray-dark">${project.name}</strong>
                             </a>
@@ -42,6 +48,36 @@
                         <p>${project.description}</p>
                     </div>
                     `;
+                  fetch(`https://raw.githubusercontent.com/${project.full_name}/master/README.md`)
+                      .then(response => response.text())
+                      .then(text => {
+                          // Convert markdown to html
+                          let converter = new showdown.Converter();
+                          let html = converter.makeHtml(text);
+                          let projectModal = document.createElement("div");
+                          projectModal.classList = "modal github-modal hidden";
+                          projectModal.innerHTML = `
+                        <div class="card">
+                            <a href="${project.html_url}" target="blank" style="float: right">Visit on GitHub</a>
+                            <br>
+                            <br>
+                            ${html}
+                        </div>
+                    `;
+
+                          projectDiv.onclick = function () {
+                              projectModal.classList.remove("hidden");
+                              document.body.scrollTop = 0; // For Safari
+                              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                          };
+
+                          projectModal.onclick = function (evt) {
+                              if (evt.target == projectModal) {
+                                  projectModal.classList.add("hidden");
+                              }
+                          };
+                          projectsDiv.appendChild(projectModal);
+                      });
                   projectsDiv.appendChild(projectDiv);
               }
           }

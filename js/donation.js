@@ -5,7 +5,6 @@ $('#donate').click(function () {
     }, "slow");
 });
 
-
 $('.modal').bind('click', function (evt) {
     if (evt.target == $('.modal')[0]) {
         $('.modal').hide();
