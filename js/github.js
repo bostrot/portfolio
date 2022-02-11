@@ -69,14 +69,16 @@
                               projectModal.classList.remove("hidden");
                               document.body.scrollTop = 0; // For Safari
                               document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                              document.body.style.opacity = 0.2;
                           };
 
                           projectModal.onclick = function (evt) {
                               if (evt.target == projectModal) {
                                   projectModal.classList.add("hidden");
+                                  document.body.style.opacity = 1;
                               }
                           };
-                          projectsDiv.appendChild(projectModal);
+                          document.getElementsByTagName("html")[0].appendChild(projectModal);
                       });
                   projectsDiv.appendChild(projectDiv);
               }

@@ -27,7 +27,7 @@
   }
 }
 
-body {
+html, body {
   font-family: 'Exo', sans-serif;
   margin: auto;
   color: var(--main-txt-color);
@@ -47,10 +47,6 @@ footer {
 footer a {
   color: var(--main-txt-color);
   text-decoration-line: underline;
-}
-
-html {
-  background: var(--main-bg-color);
 }
 
 /* Slide */
