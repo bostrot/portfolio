@@ -3,7 +3,10 @@ carousel();
 
 function carousel() {
     var items = [];
-    var rawListItems = document.getElementsByClassName("bio")[0].getElementsByTagName("div");
+    var bioContainer = document.getElementsByClassName("bio")[0];
+    bioContainer.style = "display: grid !important;";
+    document.getElementsByClassName("js-reminder")[0].style = "display: none !important;";
+    var rawListItems = bioContainer.getElementsByTagName("div");
     for (var i = 1; i < rawListItems.length; i++) {
         rawListItems[i].style = "display: none;";
     }
