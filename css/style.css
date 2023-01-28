@@ -326,11 +326,11 @@ ul.nav li.left {
   }
 
   #left-arrow {
-    margin-right: 10px;
+    position: initial !important;
   }
 
   #right-arrow {
-    margin-left: 10px;
+    position: initial !important;
   }
 }
 
