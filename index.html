@@ -11,7 +11,7 @@
     <meta name="author" content="Eric Trenkel">
 
     <title>Eric Trenkel</title>
-    
+
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -20,16 +20,16 @@
     <link rel="shortcut icon" type="image/png" href="favicon.ico" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet" />
+    <link href="fonts/roboto.css" rel="stylesheet" />
+    <link href="fonts/open_sans.css" rel="stylesheet" />
 
-    <!-- Analytics -->
+    <!-- Analytics 
     <script async defer data-domain="erictrenkel.com" src="https://analytics.bostrot.com/js/plausible.js"></script>
     <script>
         window.plausible = window.plausible || function () {
             (window.plausible.q = window.plausible.q || []).push(arguments)
         }
-    </script>
+    </script>-->
 </head>
 
 <body>
@@ -38,7 +38,32 @@
         <div class="card profile">
             <img src="img/logo.png" alt="Avatar Eric">
             <h1>Eric Trenkel</h1>
-            <p class="short_desc">Enthusiastic software developer from Aachen - Germany</p>
+            <div id="short-desc" class="hover-items">
+                <i id="left-arrow" class="fas fa-arrow-right"></i>
+                <a>An enthusiastic software developer from Aachen, Germany.</a>
+                <i id="right-arrow" class="fas fa-arrow-left"></i>
+            </div>
+            <div class="bio-text hidden">
+                <p>
+                    As a software developer in Aachen, Germany,
+                    I am an enthusiast for open-source technology, gadgets, and Linux.
+                    <br />
+                    <br />
+                    Regardless, I call myself a Windows power user and am always impressed
+                    by software that makes daily life easier, both in and outside
+                    programming.
+                    <br />
+                    <br />
+                    My own Linux infrastructure at home includes Proxmox,
+                    home automation, nginx, and custom server backends written in
+                    TypeScript, Rust, and PHP.
+                    <br />
+                    <br />
+                    I am writing my bachelor's thesis at the
+                    University of Applied Sciences Aachen.
+                </p>
+            </div>
+            <p class="js-reminder">Enable JavaScript to see what I do.</p>
             <div class="bio grid-container">
                 <div class="grid-item-start">
                     <h1>I code with</h1>
@@ -104,7 +129,8 @@
             <a href="http://t.me/bostrot_bot" onclick="plausible('telegram')">on Telegram</a>
         </p>
         <p>
-            <a href="/privacy.html" onclick="plausible('privacy')">Privacy</a> <!--|
+            <a href="/privacy.html" onclick="plausible('privacy')">Privacy</a>
+            <!--|
             <a href="/chat.html" onclick="plausible('chat')">Chat</a>-->
         </p>
         <p>
@@ -115,6 +141,7 @@
         <script src="js/slide.js"></script>
         <script src="js/github.js"></script>
         <script src="js/donation.js"></script>
+        <script src="js/dynamic.js"></script>
     </footer>
 </body>
 
