@@ -31,7 +31,7 @@
 
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Exo', sans-serif;
   margin: auto;
   color: var(--main-txt-color);
   text-align: center;
@@ -241,7 +241,7 @@ ul.nav li.left {
 .hover-items,
 .hover-items a {
   color: var(--main-txt-color);
-  padding: var(--main-padding) 0;
+  padding: var(--main-padding) 10px;
   font-size: large;
   margin: auto;
   line-height: 1.5em;
@@ -327,15 +327,26 @@ ul.nav li.left {
 
   #left-arrow {
     position: initial !important;
+    margin-right: 10px;
   }
 
   #right-arrow {
     position: initial !important;
+    margin-left: 10px;
+  }
+
+  .max60 {
+    max-width: 100%;
   }
 }
 
 #bio {
   text-decoration-line: underline;
+}
+
+.max60 {
+  max-width: 90%;
+  margin: auto;
 }
 
 #bio:hover {
@@ -398,7 +409,6 @@ ul.nav li.left {
   margin-bottom: 15px !important;
   margin: auto;
   padding: 10px;
-  border: 3px solid var(--main-bg-color);
 }
 
 
