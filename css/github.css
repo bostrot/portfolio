@@ -1,14 +1,14 @@
 /* GitHub Projects */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --hover-bg-color: #161616;
-  }
+    :root {
+        --hover-bg-color: #161616;
+    }
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    --hover-bg-color: #e5e5e5;
-  }
+    :root {
+        --hover-bg-color: #e5e5e5;
+    }
 }
 
 .hoverable:hover {
@@ -51,7 +51,7 @@
     display: none;
 }
 
-.github-modal > .card {
+.github-modal>.card {
     text-align: start;
 }
 
