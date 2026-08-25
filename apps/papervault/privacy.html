@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Privacy policy for Papervault, a local-first document archive that collects no data: no account, no analytics, no developer-operated servers.">
+    <meta name="author" content="Eric Trenkel">
+    <title>Papervault — Privacy Policy</title>
+    <link rel="shortcut icon" type="image/png" href="../../favicon.ico" />
+    <style>
+        :root {
+            --ink: #16161d;
+            --muted: #5a5a6a;
+            --bg: #ffffff;
+            --card: #f7f7fb;
+            --line: #e4e4ee;
+            --brand:#162454;
+            --brand-2: #3B82F6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #ececf2;
+                --muted: #a0a0b4;
+                --bg: #101014;
+                --card: #17171e;
+                --line: #26262f;
+                --brand: #3B82F6;
+                --brand-2: #7EA9F5;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(120deg, var(--brand), var(--brand-2));
+            color: #fff;
+            padding: 56px 24px 48px;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+            font-size: 2.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        main {
+            padding: 40px 24px 72px;
+        }
+
+        h2 {
+            margin: 40px 0 12px;
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p,
+        ul {
+            margin: 0 0 16px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lede {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--brand);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 24px;
+        }
+
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <h1>Papervault — Privacy Policy</h1>
+            <p>Effective 25 August 2026</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <div class="lede">
+                <p><strong>Papervault is a document archive that lives on your device. It is built so that the
+                        developer of Papervault <em>cannot</em> see your documents.</strong> There is no
+                    Papervault cloud, no account with us, and no telemetry. The app talks only to storage you
+                    configure.</p>
+            </div>
+
+            <h2>What Papervault collects</h2>
+            <p>Nothing. The app contains no analytics, no crash reporting service, no advertising SDKs, and no
+                tracking of any kind. The developer operates no server that the app talks to.</p>
+
+            <h2>Where your data lives</h2>
+            <p>Your documents, the text recognised from them, and everything derived from them — the search
+                index, the embeddings, the filing suggestions — are stored on your device. Text recognition,
+                search and the on-device AI models all run locally.</p>
+
+            <h2>What leaves your device, and only if you set it up</h2>
+            <ul>
+                <li><strong>Sync to storage you own.</strong> If you connect a backend — Proton Drive, S3,
+                    WebDAV, SFTP, Google Drive, OneDrive, Dropbox or a plain folder — your documents replicate
+                    to that storage under your own account. With vault encryption enabled they are encrypted
+                    before upload, so the provider stores files it cannot read or name. That provider's privacy
+                    practices are its operator's.</li>
+                <li><strong>An AI endpoint you choose.</strong> The assistant runs on-device by default. If you
+                    configure a remote OpenAI-compatible endpoint instead, the document text you ask about is
+                    sent to that endpoint — which, again, you chose and control.</li>
+                <li><strong>Model downloads.</strong> On-device AI models are fetched from public model
+                    repositories when you install them. Nothing about you or your documents is sent with the
+                    download.</li>
+                <li><strong>Paperless-ngx import.</strong> If you import an existing archive, the app reads from
+                    the server you point it at and writes nothing back to it.</li>
+            </ul>
+            <p>Each of these is off until you turn it on.</p>
+
+            <h2>Permissions the app asks for</h2>
+            <ul>
+                <li><strong>Camera</strong> — scanning documents. The images go into your archive and nowhere
+                    else.</li>
+                <li><strong>Notifications</strong> — reminders you set, and the status of background work.</li>
+                <li><strong>Biometrics</strong> — unlocking the app. Handled by your operating system; the app
+                    never sees your fingerprint or face data.</li>
+            </ul>
+
+            <h2>Children</h2>
+            <p>Papervault is a general-purpose filing tool, not directed at children, and collects no data from
+                anybody.</p>
+
+            <h2>Your rights</h2>
+            <p>Everything is on your device or in storage you control, so access, export and deletion are
+                directly in your hands: export any document at any time, or delete the app and its data. There
+                is no copy held by us to request, correct or erase.</p>
+
+            <h2>Changes to this policy</h2>
+            <p>If this policy changes, the revised version appears on this page with a new effective date. The
+                app is open source, so the behaviour this policy describes can be checked against the code.</p>
+
+            <h2>Contact</h2>
+            <p>Questions, or anything this policy should answer and does not:
+                <a href="mailto:eric@bostrot.com">eric@bostrot.com</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap"><a href="../index.html">erictrenkel.com</a> · <a
+                href="https://github.com/bostrot/paperless_go">Source &amp; support</a></div>
+    </footer>
+</body>
+
+</html>
