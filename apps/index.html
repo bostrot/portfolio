@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Apps by Eric Trenkel, with their policies and support pages.">
+    <meta name="author" content="Eric Trenkel">
+    <title>Apps — Eric Trenkel</title>
+    <link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+    <style>
+        :root {
+            --ink: #16161d;
+            --muted: #5a5a6a;
+            --bg: #ffffff;
+            --card: #f7f7fb;
+            --line: #e4e4ee;
+            --brand: #5b4fe9;
+            --brand-2: #12b5a0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #ececf2;
+                --muted: #a0a0b4;
+                --bg: #101014;
+                --card: #17171e;
+                --line: #26262f;
+                --brand: #8b81ff;
+                --brand-2: #2ad3bb;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(120deg, var(--brand), var(--brand-2));
+            color: #fff;
+            padding: 56px 24px 48px;
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        main {
+            padding: 40px 24px 72px;
+        }
+
+        .app {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 20px 22px;
+        }
+
+        .app h2 {
+            margin: 0 0 6px;
+            font-size: 1.2rem;
+        }
+
+        .app p {
+            margin: 0 0 12px;
+            color: var(--muted);
+        }
+
+        a {
+            color: var(--brand);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <h1>Apps</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrap">
+            <div class="app">
+                <h2>Braid</h2>
+                <p>Every conversation, one thread. A self-hosted messenger that weaves every chat network into
+                    one private inbox, on your own Matrix server.</p>
+                <a href="braid/privacy.html">Privacy policy</a> ·
+                <a href="https://github.com/bostrot/braid">Source &amp; support</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap"><a href="../index.html">erictrenkel.com</a></div>
+    </footer>
+</body>
+
+</html>
